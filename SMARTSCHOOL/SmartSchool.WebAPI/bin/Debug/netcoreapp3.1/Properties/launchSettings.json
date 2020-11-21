@@ -19,7 +19,7 @@
     },
     "SmartSchool.WebAPI": {
       "commandName": "Project",
-      "launchBrowser": true,
+      "launchBrowser": false,
       "launchUrl": "weatherforecast",
       "applicationUrl": "http://localhost:3000",
       "environmentVariables": {

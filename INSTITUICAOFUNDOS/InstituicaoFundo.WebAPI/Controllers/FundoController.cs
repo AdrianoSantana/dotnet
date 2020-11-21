@@ -14,7 +14,7 @@ namespace InstituicaoFundo.WebAPI.Controllers
 
         public IActionResult Get()
         {
-            return Ok("Fundo1, Fundo2, Fundo3");
+            return Ok("Fundo 1, Fundo 2");
         }
     }
 }

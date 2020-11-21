@@ -13,7 +13,7 @@ namespace SmartSchool.WebAPI.Controllers
 
         [HttpGet]
         public IActionResult Get() {
-            return Ok("Professores: Adriano, Santana");
+            return Ok();
         }
     }
 }
