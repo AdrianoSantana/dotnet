@@ -29,7 +29,7 @@ namespace InstituicaoFundo.WebAPI.Models
 
         */
 
-        public IEnumerable<InstituicaoFundo> InstituicoesFundos { get; set; }
+        public IEnumerable<FundoInstituicao> InstituicoesFundos { get; set; }
 
         /*
             Relação Instituicao Contatos

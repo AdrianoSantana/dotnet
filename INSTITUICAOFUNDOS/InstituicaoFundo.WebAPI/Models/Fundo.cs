@@ -35,6 +35,6 @@ namespace InstituicaoFundo.WebAPI.Models
             Fundos podem ser de várias instituições
 
         */
-        public IEnumerable<InstituicaoFundo> InstituicoesFundos { get; set; }
+        public IEnumerable<FundoInstituicao> InstituicoesFundos { get; set; }
     }
 }

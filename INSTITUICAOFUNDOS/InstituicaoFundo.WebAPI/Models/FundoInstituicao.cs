@@ -1,12 +1,12 @@
 namespace InstituicaoFundo.WebAPI.Models
 {
-    public class InstituicaoFundo
+    public class FundoInstituicao
     {
-        public InstituicaoFundo()
+        public FundoInstituicao()
         {
 
         }
-        public InstituicaoFundo(int instituicaoId, int fundoId)
+        public FundoInstituicao(int instituicaoId, int fundoId)
         {
             this.InstituicaoId = instituicaoId;
             this.FundoId = fundoId;
@@ -17,7 +17,5 @@ namespace InstituicaoFundo.WebAPI.Models
         public Instituicao Instituicao { get; set; }
         public int FundoId { get; set; }
         public Fundo Fundo { get; set; }
-
-
     }
 }
