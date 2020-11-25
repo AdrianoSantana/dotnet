@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using SmartSchool.WebAPI.Data;
 using SmartSchool.WebAPI.Models;
 
@@ -46,6 +47,8 @@ namespace SmartSchool.WebAPI.Controllers
 
         public IActionResult Post(Aluno aluno)
         {
+            _context.Add(aluno);
+            _context.SaveChanges();
             return Ok(aluno);
         }
 
@@ -53,6 +56,10 @@ namespace SmartSchool.WebAPI.Controllers
 
         public IActionResult Put(int id, Aluno aluno)
         {
+            var alu = _context.Alunos.AsNoTracking().FirstOrDefault(a => a.Id == id);
+            if (alu == null) return BadRequest("Aluno não encontrado!");
+            _context.Update(aluno);
+            _context.SaveChanges();
             return Ok(aluno);
         }
 
@@ -60,7 +67,11 @@ namespace SmartSchool.WebAPI.Controllers
 
         public IActionResult Delete(int id)
         {
-            return Ok();
+            var aluno = _context.Alunos.FirstOrDefault(a => a.Id == id);
+            if (aluno == null) return BadRequest("Aluno não encontrado!");
+            _context.Remove(aluno);
+            _context.SaveChanges();
+            return Ok("Deletado com sucesso!");
         }
     }
 }
