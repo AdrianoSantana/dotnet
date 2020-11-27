@@ -11,10 +11,12 @@ namespace SmartSchool.WebAPI.Controllers
     public class ProfessorController: ControllerBase
     {
         private readonly DataContext _context;
+        private readonly IRepository _repo;
 
-        public ProfessorController(DataContext context)
+        public ProfessorController(DataContext context, IRepository repo)
         {
             _context = context;
+            _repo = repo;
         }
 
         [HttpGet]
@@ -34,9 +36,12 @@ namespace SmartSchool.WebAPI.Controllers
 
         public IActionResult Post(Professor professor)
         {
-            _context.Add(professor);
-            _context.SaveChanges();
-            return Ok("Professor inserido!");
+            _repo.Add(professor);
+            if (_repo.SaveChanges())
+            {
+                return Ok(professor);
+            }
+            return BadRequest("Professor não cadastrado!");
         }
 
         [HttpDelete("{id}")]
@@ -45,19 +50,27 @@ namespace SmartSchool.WebAPI.Controllers
         {
             var professorProcurado = _context.Professores.FirstOrDefault(professor => professor.Id == id);
             if (professorProcurado == null) return BadRequest("Não existe professor com este Id");
-            _context.Remove(professorProcurado);
-            _context.SaveChanges();
-            return Ok("Professor deletado!");
+            
+            _repo.Delete(professorProcurado);
+            if (_repo.SaveChanges())
+            {
+                return Ok("Professor deletado!");
+            }
+            return BadRequest("Professor não deletado!");
         }
 
         [HttpPut("{id}")]
-        public IActionResult Put (int id, Professor profesor)
+        public IActionResult Put (int id, Professor professor)
         {
              var professorProcurado = _context.Professores.AsNoTracking().FirstOrDefault(professor => professor.Id == id);
             if (professorProcurado == null) return BadRequest("Não existe professor com este Id");
-            _context.Update(profesor);
-            _context.SaveChanges();
-            return Ok("Professor editado!");
+            
+            _repo.Update(professor);
+            if (_repo.SaveChanges())
+            {
+                return Ok(professor);
+            }
+            return BadRequest("Professor não atualizado!");
         }
     }
 }
