@@ -71,3 +71,7 @@ E:\dotnet\SMARTSCHOOL\SmartSchool.WebAPI\bin\Debug\netcoreapp3.1\runtimes\win-ar
 E:\dotnet\SMARTSCHOOL\SmartSchool.WebAPI\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\e_sqlite3.dll
 E:\dotnet\SMARTSCHOOL\SmartSchool.WebAPI\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\e_sqlite3.dll
 E:\dotnet\SMARTSCHOOL\SmartSchool.WebAPI\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\e_sqlite3.dll
+E:\dotnet\SMARTSCHOOL\SmartSchool.WebAPI\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.JsonPatch.dll
+E:\dotnet\SMARTSCHOOL\SmartSchool.WebAPI\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+E:\dotnet\SMARTSCHOOL\SmartSchool.WebAPI\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+E:\dotnet\SMARTSCHOOL\SmartSchool.WebAPI\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll

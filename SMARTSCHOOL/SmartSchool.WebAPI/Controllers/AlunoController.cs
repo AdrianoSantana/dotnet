@@ -11,19 +11,18 @@ namespace SmartSchool.WebAPI.Controllers
     [ApiController]
     public class AlunoController : ControllerBase
     {
-        private readonly DataContext _context;
         public readonly IRepository _repo;
-        public AlunoController(DataContext context, IRepository repo)
+        public AlunoController(IRepository repo)
         {
             _repo = repo;
-            _context = context;
 
         }
 
         [HttpGet]
         public IActionResult Get()
         {
-            return Ok(_context.Alunos);
+            var result = _repo.GetAllAlunos(true);
+            return Ok(result);
            
         }
 
@@ -31,13 +30,13 @@ namespace SmartSchool.WebAPI.Controllers
         [HttpGet("{id}")]
         public IActionResult GetById(int id)
         {
-            var aluno = _context.Alunos.FirstOrDefault(a => a.Id == id);
+            var aluno = _repo.GetAlunoById(id);
             if (aluno == null) return BadRequest("Não existe um aluno com este Id");
             return Ok(aluno);
         }
 
         // /api/aluno/nome
-
+        /*
         [HttpGet("byName")]
         public IActionResult GetByName(string nome, string sobrenome)
         {
@@ -45,6 +44,7 @@ namespace SmartSchool.WebAPI.Controllers
             if (aluno == null) return BadRequest("Não existe um aluno com este nome");
             return Ok(aluno);
         }
+        */
 
         [HttpPost]
 
@@ -62,7 +62,7 @@ namespace SmartSchool.WebAPI.Controllers
 
         public IActionResult Put(int id, Aluno aluno)
         {
-            var alu = _context.Alunos.AsNoTracking().FirstOrDefault(a => a.Id == id);
+            var alu = _repo.GetAlunoById(id);
             if (alu == null) return BadRequest("Aluno não encontrado!");
 
             _repo.Update(aluno);
@@ -79,7 +79,7 @@ namespace SmartSchool.WebAPI.Controllers
 
         public IActionResult Delete(int id)
         {
-            var aluno = _context.Alunos.FirstOrDefault(a => a.Id == id);
+            var aluno = _repo.GetAlunoById(id);
             if (aluno == null) return BadRequest("Aluno não encontrado!");
 
             _repo.Delete(aluno);
