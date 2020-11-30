@@ -28,6 +28,7 @@ namespace InstituicaoFundo.WebAPI
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<DataContext>(options => options.UseSqlite(Configuration.GetConnectionString("Default")));
+            services.AddScoped<IRepository, Repository>();
             services.AddControllers();
         }
 

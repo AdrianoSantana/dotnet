@@ -1,3 +1,5 @@
+using InstituicaoFundo.WebAPI.Data;
+using InstituicaoFundo.WebAPI.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace InstituicaoFundo.WebAPI.Controllers
@@ -6,15 +8,42 @@ namespace InstituicaoFundo.WebAPI.Controllers
     [ApiController]
     public class InstituicaoController: ControllerBase
     {
-        public InstituicaoController()
-        {
-            
-        }
-        [HttpGet]
+        private readonly IRepository _repository;
 
+        public InstituicaoController(IRepository repository)
+        {
+            _repository = repository;
+        }
+
+        [HttpGet]
         public IActionResult Get()
         {
-            return Ok("Instituicao1, Instituicao2, Instituicao3");
+            return Ok(_repository.GetAllInstituicoes());
+        }
+
+        [HttpPost]
+        public IActionResult Add(Instituicao inst)
+        {
+            _repository.Add(inst);
+            if (_repository.SaveChanges())
+            {
+                return Ok(inst);
+            }
+            return BadRequest("Não foi possivel inserir instituicao");
+        }
+
+        [HttpDelete("{id}")]
+        public IActionResult Delete(int id)
+        {
+            Instituicao instituicaoEncontrada = _repository.GetInstituicaoById(id);
+            if (instituicaoEncontrada == null) return BadRequest("Não existe instituicao com este id");
+            _repository.Delete(instituicaoEncontrada);
+            if (_repository.SaveChanges())
+            {
+                return Ok("Instituiçaõ deletada!");
+            }
+            return StatusCode(500);
+            
         }
     }
 }
