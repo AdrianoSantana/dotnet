@@ -75,3 +75,5 @@ E:\dotnet\SMARTSCHOOL\SmartSchool.WebAPI\bin\Debug\netcoreapp3.1\Microsoft.AspNe
 E:\dotnet\SMARTSCHOOL\SmartSchool.WebAPI\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
 E:\dotnet\SMARTSCHOOL\SmartSchool.WebAPI\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
 E:\dotnet\SMARTSCHOOL\SmartSchool.WebAPI\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
+E:\dotnet\SMARTSCHOOL\SmartSchool.WebAPI\bin\Debug\netcoreapp3.1\AutoMapper.dll
+E:\dotnet\SMARTSCHOOL\SmartSchool.WebAPI\bin\Debug\netcoreapp3.1\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
