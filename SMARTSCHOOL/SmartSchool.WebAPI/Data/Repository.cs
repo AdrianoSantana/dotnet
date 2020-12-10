@@ -1,5 +1,8 @@
+using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
+using SmartSchool.WebAPI.Helpers;
 using SmartSchool.WebAPI.Models;
 
 namespace SmartSchool.WebAPI.Data
@@ -29,6 +32,20 @@ namespace SmartSchool.WebAPI.Data
         public bool SaveChanges()
         {
             return (_context.SaveChanges() > 0); // Retorna TRUE se ele salvou algo
+        }
+        public async Task<PageList<Aluno>> GetAllAlunosAsync(PageParams pageParams, bool incluirDisciplina)
+        {
+            IQueryable<Aluno> query = _context.Alunos;
+            if (incluirDisciplina)
+            {
+               query = query.Include(a => a.AlunosDisciplinas) // Coloca dentro de alunos a tabela AlunosDisciplina
+                    .ThenInclude(ad => ad.Disciplina) // Coloca dentro da tabela Alunos disciplina os dados da disciplina
+                    .ThenInclude(d => d.Professor); // Coloca dentro da tabela disciplina os dados do professor que da a aula
+
+            } 
+            query = query.AsNoTracking().OrderBy(a => a.Id);
+            //return await query.ToListAsync();
+            return await PageList<Aluno>.CreateAsync(query, pageParams.PageNumber, pageParams.PageSize);
         }
 
         public Aluno[] GetAllAlunos(bool incluirDisciplina)
