@@ -14,5 +14,11 @@ namespace SmartSchool.WebAPI.Helpers
             set { pageSize = (value > maxPageSize) ? maxPageSize : value; }
         }
 
+        public int ? Matricula { get; set; } = null;
+        public string Nome { get; set; } = string.Empty;
+        public bool Ativo { get; set; } = true;
+
+
+
     }
 }

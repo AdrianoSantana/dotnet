@@ -35,7 +35,6 @@ namespace SmartSchool.WebAPI.Models
         public DateTime DataIni { get; set; } = DateTime.Now;
 
         public DateTime? DataFim { get; set; } = null;
-
         public bool Ativo { get; set; } = true;
         public string Telefone { get; set; }
 
