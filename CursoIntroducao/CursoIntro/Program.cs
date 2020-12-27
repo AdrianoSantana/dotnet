@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using CursoIntro;
+using CursoIntro.Api;
 using CursoIntro.ClassesMetodos;
 using CursoIntro.Colecoes;
 using CursoIntro.Excecoes;
@@ -49,6 +50,11 @@ namespace CursoCSharp
                 {"Métodos Extensao", MetodosExtensao.Executar},
 
                 {"Exceções - Primeira", Primeiro.Executar},
+                {"Exceções - Personalizada", Personalizadas.Executar},
+
+
+                {"Api - Primeiro Arquivo", PrimeiroArquivo.Executar},
+                {"Api - Lendo Arquivo", LendoArquivo.Executar},
 
             });
 
