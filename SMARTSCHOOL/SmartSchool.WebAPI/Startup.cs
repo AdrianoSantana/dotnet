@@ -28,21 +28,23 @@ namespace SmartSchool.WebAPI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-         services.AddDbContext<DataContext>(options  => options.UseSqlite(Configuration.GetConnectionString("Default")));
-         services.AddScoped<IRepository, Repository>();
+            services.AddDbContext<DataContext>(options => options.UseMySql(Configuration.GetConnectionString("MySqlConnection")));
+            services.AddScoped<IRepository, Repository>();
 
-         services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+            services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
-         services.AddControllers()
-            .AddNewtonsoftJson(
-                opt =>  opt.SerializerSettings.ReferenceLoopHandling = 
-                Newtonsoft.Json.ReferenceLoopHandling.Ignore);
-        
+            services.AddControllers()
+               .AddNewtonsoftJson(
+                   opt => opt.SerializerSettings.ReferenceLoopHandling =
+                   Newtonsoft.Json.ReferenceLoopHandling.Ignore);
+
             services.AddSwaggerGen(
-                opt => {
+                opt =>
+                {
                     opt.SwaggerDoc(
                         "smartschoolapi",
-                        new Microsoft.OpenApi.Models.OpenApiInfo(){
+                        new Microsoft.OpenApi.Models.OpenApiInfo()
+                        {
                             Title = "Smart School Api",
                             Version = "1.0"
                         }
@@ -62,7 +64,8 @@ namespace SmartSchool.WebAPI
             app.UseRouting();
             app.UseSwagger()
                 .UseSwaggerUI(
-                    opt => {
+                    opt =>
+                    {
                         opt.SwaggerEndpoint("swagger/smartschoolapi/swagger.json", "smartschoolapi");
                         opt.RoutePrefix = "";
                     }

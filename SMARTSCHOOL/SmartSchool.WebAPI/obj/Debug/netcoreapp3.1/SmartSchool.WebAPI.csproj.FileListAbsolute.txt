@@ -92,7 +92,6 @@ E:/dotnet/SMARTSCHOOL/SmartSchool.WebAPI/obj/Debug/netcoreapp3.1/SmartSchool.Web
 /media/ans3/Adriano/dotnet/SMARTSCHOOL/SmartSchool.WebAPI/obj/Debug/netcoreapp3.1/SmartSchool.WebAPI.pdb
 /media/ans3/Adriano/dotnet/SMARTSCHOOL/SmartSchool.WebAPI/bin/Debug/netcoreapp3.1/appsettings.Development.json
 /media/ans3/Adriano/dotnet/SMARTSCHOOL/SmartSchool.WebAPI/bin/Debug/netcoreapp3.1/appsettings.json
-/media/ans3/Adriano/dotnet/SMARTSCHOOL/SmartSchool.WebAPI/bin/Debug/netcoreapp3.1/Properties/launchSettings.json
 /media/ans3/Adriano/dotnet/SMARTSCHOOL/SmartSchool.WebAPI/bin/Debug/netcoreapp3.1/SmartSchool.WebAPI
 /media/ans3/Adriano/dotnet/SMARTSCHOOL/SmartSchool.WebAPI/bin/Debug/netcoreapp3.1/SmartSchool.WebAPI.deps.json
 /media/ans3/Adriano/dotnet/SMARTSCHOOL/SmartSchool.WebAPI/bin/Debug/netcoreapp3.1/SmartSchool.WebAPI.runtimeconfig.json
@@ -174,3 +173,7 @@ E:/dotnet/SMARTSCHOOL/SmartSchool.WebAPI/obj/Debug/netcoreapp3.1/SmartSchool.Web
 /media/ans3/Adriano/dotnet/SMARTSCHOOL/SmartSchool.WebAPI/obj/Debug/netcoreapp3.1/staticwebassets/SmartSchool.WebAPI.StaticWebAssets.Manifest.cache
 /media/ans3/Adriano/dotnet/SMARTSCHOOL/SmartSchool.WebAPI/obj/Debug/netcoreapp3.1/staticwebassets/SmartSchool.WebAPI.StaticWebAssets.xml
 /media/ans3/Adriano/dotnet/SMARTSCHOOL/SmartSchool.WebAPI/obj/Debug/netcoreapp3.1/SmartSchool.WebAPI.genruntimeconfig.cache
+/media/ans3/Adriano/dotnet/SMARTSCHOOL/SmartSchool.WebAPI/obj/Debug/netcoreapp3.1/scopedcss/bundle/SmartSchool.WebAPI.styles.css
+/media/ans3/Adriano/dotnet/SMARTSCHOOL/SmartSchool.WebAPI/bin/Debug/netcoreapp3.1/MySqlConnector.dll
+/media/ans3/Adriano/dotnet/SMARTSCHOOL/SmartSchool.WebAPI/bin/Debug/netcoreapp3.1/Pomelo.EntityFrameworkCore.MySql.dll
+/media/ans3/Adriano/dotnet/SMARTSCHOOL/SmartSchool.WebAPI/bin/Debug/netcoreapp3.1/Pomelo.JsonObject.dll

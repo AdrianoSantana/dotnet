@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "yECI3APe2GsTLHRKTlMrwiArOhQd1aS1yn9P/phwMIrXMU879Wn++rn9wePNxvUlyTdwxloPLgVLcMsHcuRf5Q==",
+  "dgSpecHash": "lzRXkbp7SkQ9cubPJ3vuxtE4qJ35j45X6sZnOjaMIcvcv7AnqpErFUspDtH4bJ2xgpe5yPbijGgFU2Yyd+ulnw==",
   "success": true,
   "projectFilePath": "/media/ans3/Adriano/dotnet/SMARTSCHOOL/SmartSchool.WebAPI/SmartSchool.WebAPI.csproj",
   "expectedPackageFiles": [
@@ -37,8 +37,11 @@
     "/home/ans3/.nuget/packages/microsoft.openapi/1.1.4/microsoft.openapi.1.1.4.nupkg.sha512",
     "/home/ans3/.nuget/packages/microsoft.win32.registry/4.7.0/microsoft.win32.registry.4.7.0.nupkg.sha512",
     "/home/ans3/.nuget/packages/microsoft.win32.systemevents/4.7.0/microsoft.win32.systemevents.4.7.0.nupkg.sha512",
+    "/home/ans3/.nuget/packages/mysqlconnector/1.0.1/mysqlconnector.1.0.1.nupkg.sha512",
     "/home/ans3/.nuget/packages/newtonsoft.json/12.0.2/newtonsoft.json.12.0.2.nupkg.sha512",
     "/home/ans3/.nuget/packages/newtonsoft.json.bson/1.0.2/newtonsoft.json.bson.1.0.2.nupkg.sha512",
+    "/home/ans3/.nuget/packages/pomelo.entityframeworkcore.mysql/5.0.0-alpha.1/pomelo.entityframeworkcore.mysql.5.0.0-alpha.1.nupkg.sha512",
+    "/home/ans3/.nuget/packages/pomelo.jsonobject/2.2.1/pomelo.jsonobject.2.2.1.nupkg.sha512",
     "/home/ans3/.nuget/packages/runtime.native.system.data.sqlclient.sni/4.7.0/runtime.native.system.data.sqlclient.sni.4.7.0.nupkg.sha512",
     "/home/ans3/.nuget/packages/runtime.win-arm64.runtime.native.system.data.sqlclient.sni/4.4.0/runtime.win-arm64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
     "/home/ans3/.nuget/packages/runtime.win-x64.runtime.native.system.data.sqlclient.sni/4.4.0/runtime.win-x64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
